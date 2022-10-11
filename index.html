@@ -10,7 +10,7 @@
 		<script>
 			const clientWidth = document.documentElement.clientWidth;
 			const clientHeight = document.documentElement.clientHeight;
-			const pageWidth =
+			window.pageWidth =
 				clientWidth / clientHeight > 16 / 9
 					? clientHeight * (16 / 9)
 					: clientWidth;
@@ -18,7 +18,7 @@
 			const string = `<style>html{
         font-size: ${pageWidth / 100}px
       }</style>`; //这是设置字体大小？还是1rem的值？
-			document.write(string); //为什么不直接写在script标签外面？
+			document.write(string);
 		</script>
 	</head>
 	<body>

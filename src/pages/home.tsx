@@ -1,10 +1,23 @@
-import React from 'react';
-import './home.scss';
+import React, { useEffect, useRef } from "react";
+import "./home.scss";
+import image from "../images/header.png";
+import { Chart1 } from "../components/chart-1";
+import { Chart2 } from "../components/chart-2";
 
 export const Home = () => {
-  return (
-    <div>
-      你好
-    </div>
-  );
+	return (
+		<div className="home">
+			<header style={{ backgroundImage: `url(${image})` }}></header>
+			<main>
+				<section className="section1">
+					<Chart1 />
+					<Chart2 />
+				</section>
+				<section className="bordered section2"></section>
+				<section className="bordered section3"></section>
+				<section className="bordered section4"></section>
+				<section className="bordered section5"></section>
+			</main>
+		</div> //这段语法不是很明白
+	);
 };
