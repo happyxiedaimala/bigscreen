@@ -11,65 +11,50 @@ export const Chart1 = () => {
 		// 引入echart
 		//myChart设置表格格式
 		myChart.setOption(
-			// createEchartsOptions({
-			// 	xAxis: {
-			// 		data: [
-			// 			"兰州新区",
-			// 			"兰州新区",
-			// 			"兰州新区",
-			// 			"兰州新区",
-			// 			"兰州新区",
-			// 			"兰州新区",
-			// 			"兰州新区",
-			// 			"兰州新区",
-			// 			"兰州新区",
-			// 		],
-			// 		axisTick: { show: false },
-			// 		axisLabel: {
-			// 			formatter(val) {
-			// 				if (val.length > 2) {
-			// 					const array = val.split("");
-			// 					array.splice(2, 0, "\n");
-			// 					return array.join("");
-			// 				} else {
-			// 					return val;
-			// 				}
-			// 			},
-			// 		},
-			// 	},
-
-			// 	yAxis: {
-			// 		splitLine: {
-			// 			show: false,
-			// 		},
-			// 		axisLine: {
-			// 			lineStyle: {
-			// 				color: "#083B70",
-			// 			},
-			// 		},
-			// 	},
-			// 	series: [
-			// 		{
-			// 			type: "bar",
-			// 			data: [10, 20, 36, 41, 15, 26, 37, 18, 29],
-			// 		},
-			// 	],
-			// })
-			{
+			createEchartsOptions({
 				xAxis: {
-					type: "category",
-					data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+					data: [
+						"兰州新区",
+						"兰州新区",
+						"兰州新区",
+						"兰州新区",
+						"兰州新区",
+						"兰州新区",
+						"兰州新区",
+						"兰州新区",
+						"兰州新区",
+					],
+					axisTick: { show: false },
+					axisLabel: {
+						formatter(val) {
+							if (val.length > 2) {
+								const array = val.split("");
+								array.splice(2, 0, "\n");
+								return array.join("");
+							} else {
+								return val;
+							}
+						},
+					},
 				},
+
 				yAxis: {
-					type: "value",
+					splitLine: {
+						show: false,
+					},
+					axisLine: {
+						lineStyle: {
+							color: "#083B70",
+						},
+					},
 				},
 				series: [
 					{
-						data: [120, 200, 150, 80, 70, 110, 130],
 						type: "bar",
+						data: [10, 20, 36, 41, 15, 26, 37, 18, 29],
 					},
 				],
-			}
+			})
 		);
 	}, []);
 
