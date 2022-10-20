@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && rm -rf publish/* && cp -r dist/* publish/",
+    "upload": "git add . && git commit -am \"commmit\" && git push origin main",
     "serve": "vite preview"
   },
   "dependencies": {
